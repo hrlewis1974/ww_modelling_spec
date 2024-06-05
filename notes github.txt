@@ -1,0 +1,21 @@
+# commands to do from the beginning
+
+cd c:/users/hlewis/downloads/ww_modelling_spec
+git init
+git add .
+git commit -m "save all changes to memory"
+git log
+git remote add origin https://github.com/hrlewis1974/ww_modelling_spec.git
+git push -u origin master
+
+# commands to update when the repos have been set up and configured
+
+cd c:/users/hlewis/downloads/ww_modelling_spec
+git add .
+git commit -m "save all changes to memory"
+git push -u origin master
+
+# simple pull from git hub
+
+cd c:/users/hlewis/downloads/ww_modelling_spec
+git pull

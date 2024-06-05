@@ -1,0 +1,7 @@
+# ignore folders
+exports/
+notes/
+
+# ignore log files
+**/*.log
+*.zip
