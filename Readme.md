@@ -137,12 +137,12 @@ Review of the collected asset data provided by WWL to assess its suitability for
 * Long sections for all branches should be checked for inconsistencies;
 * Identification of conflicting data sources, & hierarchy of data sources to resolve conflicts;
 * Identification of suspect data, for example:
-- Identification of negative pipe gradients;
-- Reducing pipe diameters in downstream direction;
-- pipe invert step up in the downstream direction
-- Steep pipes (>10% slope);
-- Non-matching pipe soffits;
-- Identification of locations where pipe invert doesn’t correspond to manhole invert level (i. e. pipe IL being below manhole IL etc.)
+  * Identification of negative pipe gradients;
+  * Reducing pipe diameters in downstream direction;
+  * pipe invert step up in the downstream direction
+  * Steep pipes (>10% slope);
+  * Non-matching pipe soffits;
+  * Identification of locations where pipe invert doesn’t correspond to manhole invert level (i. e. pipe IL being below manhole IL etc.)
 * Confirmation of network connectivity.
 * Missing, inconsistent, ambiguous data relating to pump stations, constructed overflows or any other ancillaries that are to be included in the model
 * Identification of flow directions
@@ -151,7 +151,7 @@ Review of the collected asset data provided by WWL to assess its suitability for
 
 Following review of asset data, a prioritized list (plus figures showing locations) of data collection requirements should be generated and agreed with WWL. The following priority survey subdivision is suggested:
 
-*High – Critical to model confidence i.e. overflow details, pump station data etc.
+* High – Critical to model confidence i.e. overflow details, pump station data etc.
 * Medium – Important to model confidence, but can be estimated based on engineering judgement e.g. Manhole inverts which can be interpolated based on upstream and downstream inverts;
 * Low – Non-critical to model confidence e.g. Manhole lid levels than can be interpolated with some confidence from LiDAR records (not uncontrolled overflow locations).
 
