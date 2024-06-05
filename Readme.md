@@ -87,14 +87,30 @@ All models developed and all associated model build data is the asset of each Co
 ## Specification General Notes
 See below for notes that apply to this specification:
 
-Any associated documentation that is provided to WWL must not require any specialist software.
-
-Where the modeller if being unable to comply fully with the specification they should comply with the intent of the specification. If any doubt exists as to the intent of the specification’s clarification should be sought from Wellington Water.
-
-Any variation to these specification requirements must be confirmed with the Wellington Water project manager in writing.
-
-Appendices contain additional information useful for modelling. Some of this information is technical guidance useful for hydraulic network system modelling and designs.
+- Any associated documentation that is provided to WWL must not require any specialist software.
+- Where the modeller if being unable to comply fully with the specification they should comply with the intent of the specification. If any doubt exists as to the intent of the specification’s clarification should be sought from Wellington Water.
+- Any variation to these specification requirements must be confirmed with the Wellington Water project manager in writing.
+- Appendices contain additional information useful for modelling. Some of this information is technical guidance useful for hydraulic network system modelling and designs.
 
 ## Naming Convention, Model and File Structure
 The model features, file and folder naming conventions will be developed in consultation with WWL.
 
+See Appendix A - Folder and Model Database Structure for example of the expected conventions.
+
+# Model Extent and Definition
+
+## Overview
+
+The primary objective of this phase to agree draft model extents with WWL. It is expected that the draft model extents may be incrementally revised in subsequent phases as the study progress and understanding of the catchment improves.
+
+## Output: WWL Review A.1 – Model Extents
+
+> [!NOTE]  
+> A brief memo (or email if agreed with WWL) detailing the proposed draft model extents shall be prepared and submitted to WWL for review and approval prior to progressing to the next phase. Typically, the memo should detail the following:
+> - Catchment service area extents, and identify any alterations to the catchment boundary supplied by WWL;
+> - If available locations and types monitoring data within the catchment (including temporary and permanent (SCADA) i.e. rain gauges (temporary, permanent), flow and level data.
+> - Identification of all known asset types proposed to be included within model extents and identify network to be excluded. In particular detail pump stations, bifurcations and EOPs other key assets which are within and outside model extents
+> - Detail known and reported wastewater network issues;
+> - Low points within the network, that may suffer from uncontrolled spills;
+> - Identification of key growth areas within the catchment;
+> - Provision of a network schematic detailing connectivity and significant network features (pump stations, bifurcations, engineered overflow points, gates etc...).
