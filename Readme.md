@@ -195,17 +195,17 @@ Review of the collected gauge data provided by WWL to assess its suitability for
 > 
 > Output from this stage will be a short memo which details the activities undertaken, findings and recommendations developed during the data review. It should contain the following:
 > * Description of data gathered including review comments and decisions;
-> - Data collection request plan (High: Red; Medium: Purple; Low: Yellow)
+>   * Data collection request plan (High: Red; Medium: Purple; Low: Yellow)
 > * Determination of data gaps or data inconsistencies;
-> - Discussion on the quality and coverage of the gauge data and identification of areas where possible issues may arise during calibration
+>   * Discussion on the quality and coverage of the gauge data and identification of areas where possible issues may arise during calibration
 > * Recommendations for additional work for obtaining missing data;
-> - A statement assessing the expected level of confidence in the model outputs and identify the associated potential limitations to model application
+>   * A statement assessing the expected level of confidence in the model outputs and identify the associated potential limitations to model application
 Recommended updates to GIS or other data management software (eg: InfoNet)
 > * Summary of operational issues identified in the network;
 > * Gauge Summary
-> - Flow gauge catchment details and schematic diagram
-> - Flow data summary including selected events for DWF calibration / verification, WWF calibration/ verification
-> - Rainfall data summary indicating the ARI values for each event, total rainfall depth and maximum rainfall intensity for each event. Also indicate whether collected data are suitable for use in the model calibration and verification process.
-> - Indicate whether PWWF/PDWF criterion is met for selected event
-> - Gauged spills statistics – frequency, duration.
-> - Provide a summary tables of daily average observed wastewater flow volumes and average volume of water usage meter records for each gauge catchment for dry weather period
+>   * Flow gauge catchment details and schematic diagram
+>   * Flow data summary including selected events for DWF calibration / verification, WWF calibration/ verification
+>   * Rainfall data summary indicating the ARI values for each event, total rainfall depth and maximum rainfall intensity for each event. Also indicate whether collected data are suitable for use in the model calibration and verification process.
+>   * Indicate whether PWWF/PDWF criterion is met for selected event
+>   * Gauged spills statistics – frequency, duration.
+>   * Provide a summary tables of daily average observed wastewater flow volumes and average volume of water usage meter records for each gauge catchment for dry weather period
