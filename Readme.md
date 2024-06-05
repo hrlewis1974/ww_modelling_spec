@@ -103,9 +103,7 @@ See Appendix A - Folder and Model Database Structure for example of the expected
 
 The primary objective of this phase to agree draft model extents with WWL. It is expected that the draft model extents may be incrementally revised in subsequent phases as the study progress and understanding of the catchment improves.
 
-## Output: WWL Review A.1 – Model Extents
-
-> [!NOTE]  
+> [!NOTE] Output: WWL Review A.1 – Model Extents
 > A brief memo (or email if agreed with WWL) detailing the proposed draft model extents shall be prepared and submitted to WWL for review and approval prior to progressing to the next phase. Typically, the memo should detail the following:
 > - Catchment service area extents, and identify any alterations to the catchment boundary supplied by WWL;
 > - If available locations and types monitoring data within the catchment (including temporary and permanent (SCADA) i.e. rain gauges (temporary, permanent), flow and level data.
