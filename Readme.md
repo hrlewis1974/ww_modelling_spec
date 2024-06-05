@@ -70,3 +70,31 @@ The below table summarizes the scope of this specification and outlines key stud
 | 5 | Model Calibration, Verification and Validation | Model calibration, verification & validation against observed flow data and historical observations | A.4 – DWF Calibration Memo, A.5 – WWF Calibration Memo and A.6 – Model Build and Calibration Report | DWF Calibration Plots and statistics, WWF Calibration Plots and statistics and Model Calibration ICMT |
 | 6 | System Performance Assessment | Assessment of the network performance for various development horizons | B.1 - System Performance Assessment Report | Model SPA ICMT |
 
+## Level of Service
+There is no regionally regulated level of service of wastewater network capacity. As such targeted levels of service for wastewater network performance will be advised by Wellington Water as required.
+
+## Model Software
+Software platforms to be used for wastewater modelling include:
+
+- Model Build: InfoNet;
+- Hydraulic Modelling: ICM.
+
+The version of the software is to be confirmed by WWL.
+
+## Ownership
+All models developed and all associated model build data is the asset of each Council within the area covered by Wellington Water. Model management and the updating the model will be the responsibility of Wellington Water.
+
+## Specification General Notes
+See below for notes that apply to this specification:
+
+Any associated documentation that is provided to WWL must not require any specialist software.
+
+Where the modeller if being unable to comply fully with the specification they should comply with the intent of the specification. If any doubt exists as to the intent of the specification’s clarification should be sought from Wellington Water.
+
+Any variation to these specification requirements must be confirmed with the Wellington Water project manager in writing.
+
+Appendices contain additional information useful for modelling. Some of this information is technical guidance useful for hydraulic network system modelling and designs.
+
+## Naming Convention, Model and File Structure
+The model features, file and folder naming conventions will be developed in consultation with WWL.
+
