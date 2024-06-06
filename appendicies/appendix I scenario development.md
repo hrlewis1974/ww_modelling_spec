@@ -3,7 +3,7 @@
 https://github.com/hrlewis1974/ww_modelling_spec/blob/a28079c640921513a945767a11626f7a3c8f3ead/code/A1%20clear%20cells.sql#L1-L25
 https://github.com/hrlewis1974/ww_modelling_spec/blob/0e0040948871d39c04c70b0d94349ba8c6ac9412/code/A2%20infill%20dummy%20data.sql#L1-L2
 https://github.com/hrlewis1974/ww_modelling_spec/blob/0e0040948871d39c04c70b0d94349ba8c6ac9412/code/B1%20scenarios.sql#L1-L21
-https://github.com/hrlewis1974/ww_modelling_spec/blob/0e0040948871d39c04c70b0d94349ba8c6ac9412/code/C1%20polygon.sql#L1-L1000
+https://github.com/hrlewis1974/ww_modelling_spec/blob/0e0040948871d39c04c70b0d94349ba8c6ac9412/code/C1%20polygon.sql#L1-L67
 https://github.com/hrlewis1974/ww_modelling_spec/blob/0e0040948871d39c04c70b0d94349ba8c6ac9412/code/C2%20headship.sql#L1-L
 https://github.com/hrlewis1974/ww_modelling_spec/blob/0e0040948871d39c04c70b0d94349ba8c6ac9412/code/C3%20populations.sql#L1-L
 https://github.com/hrlewis1974/ww_modelling_spec/blob/0e0040948871d39c04c70b0d94349ba8c6ac9412/code/D1%20infill%20growth.sql#L1-L
