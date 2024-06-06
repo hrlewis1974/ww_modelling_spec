@@ -1,3 +1,5 @@
+# Network Data
+
 | Data Collection | Extent |  | Requested (Date) | From | Received (Date) | Source or filename/folder | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Asset GIS |  |  |  |  |  |  | InfoNet database of the wastewater network |
@@ -8,6 +10,8 @@
 | Flow Monitor Installation Records |  |  |  |  |  |  |  |
 | Network Schematics |  |  |  |  |  |  | A very basic schematic is available with the main lines and catchment design flows |
 | New Network Details (as-builts) |  |  |  |  |  |  | New pipework not currently in the latest GIS data (there is often a time LAG) |
+
+# Ancillaries
 
 | Data Collection | Extent |  | Requested (Date) | From | Received (Date) | Source or filename/folder | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -24,6 +28,8 @@
 | Penstocks (Sluice or Gate Valves) |  |  |  |  |  |  | Location, size, setting (opening height) |
 | Storage Tanks |  |  |  |  |  |  | Overflow and maintenance manual available at WWL |
 | Hydrobrakes |  |  |  |  |  |  | Location, size, type, H/Q curve |
+
+# Terrain and Environment
 
 | Data Collection | Extent |  | Requested (Date) | From | Received (Date) | Source or filename/folder | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -47,6 +53,8 @@
 | Long term evaporation data |  |  |  |  |  |  | For runoff model |
 | Soil Moisture Deficit Data (SMD) |  |  |  |  |  |  | Only required for the Wallingford Procedure Runoff Model (NOT Advised) |
 
+# Dry Weather Flow and Loads
+
 | Data Collection | Extent |  | Requested (Date) | From | Received (Date) | Source or filename/folder | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | District Plan |  |  |  |  |  |  | From Council |
@@ -66,6 +74,8 @@
 | School terms and holidays |  |  |  |  |  |  |  |
 | Bore-hole abstraction licences |  |  |  |  |  |  | Can be useful to confirm large additional water users that are not METERED |
 
+# Operational and Maintenance
+
 | Data Collection | Extent |  | Requested (Date) | From | Received (Date) | Source or filename/folder | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Flooding - Known internal property issues |  |  |  |  |  |  | Ops meeting first. Confirm checked afterwards |
@@ -82,6 +92,8 @@
 | Sewer Pits |  |  |  |  |  |  | 24 Sewer pits within the Wellington area are detailed in a booklet |
 | Flushing List |  |  |  |  |  |  |  |
 
+# Future Planning Issues
+
 | Data Collection | Extent |  | Requested (Date) | From | Received (Date) | Source or filename/folder | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Proposed Development Areas |  |  |  |  |  |  | Housing growth capacities |
@@ -93,12 +105,16 @@
 | Committed Network Upgrades |  |  |  |  |  |  |  |
 | Project Interfaces |  |  |  |  |  |  | Key future projects that may influence or interact with the future catchment network |
 
+# Existing Planning Work
+
 | Data Collection | Extent |  | Requested (Date) | From | Received (Date) | Source or filename/folder | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Existing Network Models |  |  |  |  |  |  |  |
 | Previous Flow and Rainfall Surveys |  |  |  |  |  |  |  |
 | Previous Model Build and Calibration Reports |  |  |  |  |  |  |  |
 | Previous Connectivity Surveys |  |  |  |  |  |  |  |
+
+# Wastewater Treatment Plant
 
 | Data Collection | Extent |  | Requested (Date) | From | Received (Date) | Source or filename/folder | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -108,6 +124,8 @@
 | Inlet Flumes/Gates |  |  |  |  |  |  | RTC Logic on any control gates? |
 | Bypass Arrangement |  |  |  |  |  |  | RTC Logic on bypass? |
 | Storm tank and outfall detail |  |  |  |  |  |  | Storm Tank return PS? |
+
+# As Built Scans
 
 | Data Collection | Extent |  | Requested (Date) | From | Received (Date) | Source or filename/folder | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
