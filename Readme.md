@@ -495,3 +495,52 @@ A trade waste group is to be set-up and a profile entered for each trade flow. A
 * Differences in process
 
 The initial generic diurnal commercial profile(s) to be used are provided in Appendix E and can be refined during model calibration against observed data where available.
+
+## Base Flow Setup
+
+For design horizon models four separate baseflow values will need to be considered:
+
+| Infiltration Period | Period | No. Of months | Use | Comments |
+| --- | --- | --- | --- | --- |
+| Summer | November to April | 6 | Bathing water spill frequency |  |
+| Winter | May to July | 3 | Overflow frequency |  |
+| Spring | August to October | 3 | Overflow frequency | Where catchment peak groundwater conditions in spring |
+| Annual | Full Year | 12 |  | If there is no significant difference between summer and winter infiltration, an annual infiltration figure can be used. |
+
+The methodology for estimating seasonal variation in base flow will be as follows:
+
+* Obtain (up to 3 years) of flow data from WWL for monitored SCADA points within the catchment (e.g. WwTW inlet and pump stations)
+* Obtain rainfall data for the same period
+* Assess dry weather flows
+  * Remove all flows for wet days (greater than 2mm depth in 24 hrs)
+  * Remove flows for two days following the event. This period could be longer if the catchment suffers from excessive groundwater infiltration
+  * With the remaining data, calculate:
+    * Dry day flow or
+    * Minimum night-flow
+    * Average annual infiltration (summer, winter and spring)
+    * Compare infiltration figures with modelled assumptions
+    * Amend modelled infiltration values in accordance with annual observations
+
+> [!NOTE]
+> Output: WWL Model Build Review
+> 
+> Following completion of Hydraulic and Hydrological Model build the consultant shall submit a memo describing the following:
+> 
+> * Activities undertaken to complete the model build
+> * Summaries of model features and catchments characteristics
+> * Metadata utilized of all model data sources
+> * Any recommendations regarding further investigation or data capture
+> * Limitations and assumptions associated with the model build
+> * Sub Catchment Extents and Characterisation: Following completion of sub-catchment demarcation and characterisation, a plan shall be provided to WWL indicating sub-catchment extents. In addition, tables summarising the catchment characteristics
+> * Model Build Cards for all ancillary structures: Pump Stations, Engineered Overflow Points, storage tanks, bifurcations, grit chambers, penstocks, other if applicable
+> * Model Network: Transportable database
+> 
+> The network description within the model should list the following information:
+> 
+> * Date and purpose of model build
+> * Previous version of model (if applicable) i.e. which previous model was used as base model
+> * Title of model build and verification documents
+> * Name of consultant and project manager
+> * Name of WWL contact responsible for project
+> 
+> Upon Completion of Model Build, WWL will undertake a review of the model, refer to Appendix G for potential model review checklist.
