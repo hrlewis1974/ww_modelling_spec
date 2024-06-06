@@ -686,10 +686,12 @@ The ground infiltration can be calibrated by adjusting the percolation percentag
 | New UK Depth (m) |  | 0.2 |  |
 
 > [!NOTE]
-> 40% of catchment area should be applied for the final runoff surface
-> FRC – Fast Response Component
-> SRC – Slow Response Component
-> GWI – Groundwater Infiltration
+> | Item | Comments |
+> | --- | --- |
+> | Runoff Surface 4 | 40% of catchment area should be applied for the final runoff surface |
+> | FRC | Fast Response Component |
+> | SRC | Slow Response Component |
+> | GWI | Groundwater Infiltration |
 
 Whilst tables above and below summarise the details on runoff surfaces and ground infiltration. It is understood that certain parameters may change due to the nature of the catchment as such change in the parameters are to be discussed and agreed with WWL. Previous models, if available, may be used to derive the necessary values for the parameter.
 
