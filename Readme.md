@@ -53,13 +53,13 @@ Wellington Water Ltd
 | WWF | Wet Weather Flow |
 | WWL | Wellington Water Limited |
 
-# Introduction
+# 1 Introduction
 
-## Purpose
+## 1.1 Purpose
 
 The purpose of this Wastewater Network Modelling Specification is to ensure a consistent standard of wastewater network modelling across Wellington Water Ltd’s (WWL) client councils. Further this specification standardizes the model asset & time vary data inputs formats to link with WWL WW asset management planning process.
 
-## Scope and Outputs
+## 1.2 Scope and Outputs
 The below table summarizes the scope of this specification and outlines key study outputs at each phase.
 
 | section | phase | Summary | Consultant Report Output | Consultant Supporting Output |
@@ -70,10 +70,10 @@ The below table summarizes the scope of this specification and outlines key stud
 | 5 | Model Calibration, Verification and Validation | Model calibration, verification & validation against observed flow data and historical observations | A.4 – DWF Calibration Memo, A.5 – WWF Calibration Memo and A.6 – Model Build and Calibration Report | DWF Calibration Plots and statistics, WWF Calibration Plots and statistics and Model Calibration ICMT |
 | 6 | System Performance Assessment | Assessment of the network performance for various development horizons | B.1 - System Performance Assessment Report | Model SPA ICMT |
 
-## Level of Service
+## 1.3 Level of Service
 There is no regionally regulated level of service of wastewater network capacity. As such targeted levels of service for wastewater network performance will be advised by Wellington Water as required.
 
-## Model Software
+## 1.4 Model Software
 Software platforms to be used for wastewater modelling include:
 
 - Model Build: InfoNet;
@@ -81,10 +81,10 @@ Software platforms to be used for wastewater modelling include:
 
 The version of the software is to be confirmed by WWL.
 
-## Ownership
+## 1.5 Ownership
 All models developed and all associated model build data is the asset of each Council within the area covered by Wellington Water. Model management and the updating the model will be the responsibility of Wellington Water.
 
-## Specification General Notes
+## 1.6 Specification General Notes
 See below for notes that apply to this specification:
 
 - Any associated documentation that is provided to WWL must not require any specialist software.
@@ -92,14 +92,14 @@ See below for notes that apply to this specification:
 - Any variation to these specification requirements must be confirmed with the Wellington Water project manager in writing.
 - Appendices contain additional information useful for modelling. Some of this information is technical guidance useful for hydraulic network system modelling and designs.
 
-## Naming Convention, Model and File Structure
+## 1.7 Naming Convention, Model and File Structure
 The model features, file and folder naming conventions will be developed in consultation with WWL.
 
 See Appendix A - Folder and Model Database Structure for example of the expected conventions.
 
-# Model Extent and Definition
+# 2 Model Extent and Definition
 
-## Overview
+## 2.1 Overview
 
 The primary objective of this phase to agree draft model extents with WWL. It is expected that the draft model extents may be incrementally revised in subsequent phases as the study progress and understanding of the catchment improves.
 
@@ -115,21 +115,21 @@ The primary objective of this phase to agree draft model extents with WWL. It is
 > - Identification of key growth areas within the catchment;
 > - Provision of a network schematic detailing connectivity and significant network features (pump stations, bifurcations, engineered overflow points, gates etc...).
 
-# Data Scoping
+# 3 Data Scoping
 
-## Overview
+## 3.1 Overview
 
 The objective of this stage is to review the data available to complete model build and calibration this review should identify gaps and inconsistencies that require resolution either through additional data collection or the application of engineering judgement.
 
 Output from this phase will be a brief data scoping memo detailing findings, activities and prioritized data collection requirements.
 
-## Input Data
+## 3.2 Input Data
 
 Appendix B - Data Collection Checklist summarises the potential data collection requirements, note this table is not a comprehensive list of all available data sources but is provided as a guide to assist in development of data requirements.
 
-## Asset Data
+## 3.3 Asset Data
 
-### Asset Data Review
+### 3.3.1 Asset Data Review
 
 Review of the collected asset data provided by WWL to assess its suitability for the modelling exercise. Carry out the following checks with this data:
 
@@ -147,7 +147,7 @@ Review of the collected asset data provided by WWL to assess its suitability for
 * Missing, inconsistent, ambiguous data relating to pump stations, constructed overflows or any other ancillaries that are to be included in the model
 * Identification of flow directions
 
-### Asset Data – Data Collection
+### 3.3.2 Asset Data – Data Collection
 
 Following review of asset data, a prioritized list (plus figures showing locations) of data collection requirements should be generated and agreed with WWL. The following priority survey subdivision is suggested:
 
@@ -157,7 +157,7 @@ Following review of asset data, a prioritized list (plus figures showing locatio
 
 Where possible, missing or inconsistent asset data shall be filled using engineering judgement during the model build phase.
 
-## Catchment Data Review
+## 3.4 Catchment Data Review
 
 Review of the collected catchment data provided by WWL to assess its suitability for the modelling exercise. Specifically identify:
 
@@ -167,7 +167,7 @@ Review of the collected catchment data provided by WWL to assess its suitability
 * A flow volume comparison tables (based on flow monitor and water meter records) should be prepared and reported to Wellington Water, including any issues that may be considered to adversely affect the model calibration process or standard.
 * Flow gauge catchments should be defined and reported on as leaf or subtract, as results from calibration of subtract gauges is inherently less reliable than for leaf gauges
 
-## Operational Data Review
+## 3.5 Operational Data Review
 Review of the collected operational data provided by WWL to assess its suitability for the modelling exercise. Specifically identify:
 
 * Reported wet weather and dry weather overflows;
@@ -176,7 +176,7 @@ Review of the collected operational data provided by WWL to assess its suitabili
 * Ancillary structure operational records including set points, manual interventions etc…
 * Real Time Control routines
 
-## Temporary Flow, Depth and Rainfall Review
+## 3.6 Temporary Flow, Depth and Rainfall Review
 Review of the collected gauge data provided by WWL to assess its suitability for the modelling exercise. Specifically:
 
 * Prior to model build review the flow monitoring contractor’s Installation and Data Reports must be reviewed to identify issues that may adversely affect the model calibration / verification process.
@@ -210,9 +210,9 @@ Recommended updates to GIS or other data management software (eg: InfoNet)
 >   * Gauged spills statistics – frequency, duration.
 >   * Provide a summary tables of daily average observed wastewater flow volumes and average volume of water usage meter records for each gauge catchment for dry weather period
 
-# Hydraulic Model Build
+# 4 Hydraulic Model Build
 
-## General
+## 4.1 General
 
 This specification is developed to provide minimum requirements to follow during model build process, system assessment stages, option developments and improvement works plans preparation. 
 
@@ -228,7 +228,7 @@ Consider all requirements contained in this specification as minimum requirement
 
 Carry out a site visit prior to commencement of the modelling project to familiarise the modelling team with catchment topography, wastewater system features, land use etc.
 
-## Data Flags
+## 4.2 Data Flags
 
 The WWL standard user flag system must be used. This will allow users to identify the data sources and changes (see Appendix C - Data Flags for a description of each of the flags and their use). Data sources and all assumptions should be clearly documented in the Model Build Report.
 
@@ -245,13 +245,13 @@ Possible sources could include council GIS, survey, derived from other data, e.g
 
 LiDAR contours or raster grid, derived from interpolation, extrapolation, assumption, parameter values assigned from literature, modelling specifications etc.
 
-## WWL Modelling Data Standards
+## 4.3 WWL Modelling Data Standards
 
 Final model asset data following completion of the model build is to be provided to WWL in accordance with WWL Modelling Data Standards format (refer Modelling Data Standards Report, WWL, June 2019).
 
-##	Hydraulic Model Build
+##	4.4 Hydraulic Model Build
 
-###	Nodes
+###	4.4.1 Nodes
 
 Model nodes can be classed into two categories: - standard manholes/chambers and dummy nodes. Dummy nodes are utilized to maintain consistency with the GIS e.g. representation of the GIS ‘Nodal Changes’ features.
 
@@ -259,7 +259,7 @@ Manholes should as default be represented with flood type of lost, however care 
 
 Dummy nodes should as default be represented with flood type of sealed, with the manhole ground level set to match the highest connecting pipe soffit. Manhole chamber dimensions should match the largest contributing pipe diameter.
 
-### Un-modelled Storage
+### 4.4.2 Un-modelled Storage
 
 Wastewater reticulation upstream of the model extents may be represented within the model at loading nodes. This un-modelled storage should include network with invert levels lower than the lid level of the loading node.
 
@@ -267,7 +267,7 @@ The use of un-modelled storage may not be necessary in detailed or catchment mod
 
 If any model simplification has been undertaken, manholes are removed from the modelled network. The missing pipes, manholes and connection pipes, provide a storage volume (when the network is surcharged) and can be represented using an inference tool within ICM. Background guidance can be found on this in the WaPUG User Note 15 “Storage Compensation”.
 
-### Conduits
+### 4.4.3 Conduits
 
 Model conduits can be classed into three categories:
 
@@ -314,7 +314,7 @@ Headloss coefficients are calculated on the angle of approach of the incoming an
 
 The ICM hydraulic engine applies a Preissmann Slot is a conceptual vertical and narrow slot providing a conceptual free surface condition for the flow when the water level is above the top of a closed conduit. Care with the default application of the Preissman Slot should be taken for large diameter sewers which are highly surcharged, in these instances the Preissman Slot width may require adjustment to mitigate against excess artificial storage volume being introduced in the model.
 
-### Engineered Overflow Points (EOP) and Bifurcations
+### 4.4.4 Engineered Overflow Points (EOP) and Bifurcations
 
 An Engineered Overflow Point (EOP) is defined as a chamber which has more than one outgoing pipe removing flow from the network and discharging to the environment. A bifurcation on the other hand is defined as a chamber with more than one outgoing pipe where flow is diverted to another part of the wastewater network.
 
@@ -337,7 +337,7 @@ The modeler will assume that the flow in the overflow chamber is subcritical and
 
 For a high-level pipe overflow, the spill pipe will be modelled as an orifice.
 
-### Orifices (Throttle pipe)
+### 4.4.5 Orifices (Throttle pipe)
 
 Flow rates through an orifice will depend on the following:
 
@@ -358,7 +358,7 @@ The modeller must specify the following parameters:
 * The limiting discharge field should be set to 0.
 * Further guidance regarding the Orifice Equation can be found in the WaPUG User Note 2 ‘Modelling Ancillaries: Orifice Equations’.
 
-### Weirs
+### 4.4.6 Weirs
 
 Asset data such as invert level, weir length and a coefficient of discharge must be set by the modeler. Weir coefficients are influenced by a number of factors:
 
@@ -384,7 +384,7 @@ Guidance for the input of weir coefficient data is suggested:
   * The invert of the orifice will need to be set so that the midpoint opening is at the invert of the spill pipe.
   * The default value of 0.85 should be used for the orifices discharge coefficient.
 
-### Pump Stations
+### 4.4.7 Pump Stations
 
 Generally, there are four types of pump stations that can be modeled: trunk, local, return pump (from offline storage) and private. Asset data to be collected when modelling a pump station will include the following:
 
@@ -407,25 +407,25 @@ Guidance for the input of pump station data is as follows:
 * If the model is large and complex, some of the pumps can be changed to ‘screw pumps’, however this will need to be agreed with WWL. These changes should not be necessary during model calibration or system performance assessments.
 * Real time control may initially be collected from previous modeling / pump station reports. However, the operation will need to be confirmed with the operations staff.
 
-### Storage Tanks
+### 4.4.8 Storage Tanks
 Storage tanks can be modelled as large chambers (or storage node), in-line or off-line pipes. The modeler should be aware:
 
 * Of the tank operational routines in particular how the tank is filled and drained.
 * That during initialisation, the tank will fill up to the level of the lowest outgoing link. The modeller may be required to drain the tank by adding a dummy closed gate to a dummy node at tank floor invert level.
 
-### Siphons
+### 4.4.9 Siphons
 
 An inverted siphon is a depressed sewer that drops below the hydraulic gradient. The pipe is usually surcharged and includes an inlet chamber, a collection of depressed pipes and an outlet chamber. It is desirable for the velocity in the depressed pipes to be above 1.5 m/s to avoid sedimentation (ideally about 3 m/s).
 
 Guidance on modelling siphons can be found in WaPUG User Note 19 ‘Modelling of Inverted Siphons in Taunton’.
 
-### Operational Rules
+### 4.4.10 Operational Rules
 
 If the network is actively operated under different operational rules and strategies those will be specified in the project scope, those should be modelled using RTC (Real time Control) functions in the software.
 
-## Hydrological Model Build
+## 4.5 Hydrological Model Build
 
-### Catchment Demarcation
+### 4.5.1 Catchment Demarcation
 
 For the purposes of calibration of the hydrologic model, sub catchments should generally be demarcated with the following criteria:
 
@@ -437,11 +437,11 @@ For the purposes of calibration of the hydrologic model, sub catchments should g
 * Where applicable new catchment extents shall be developed to cover the future service area outside the existing area of service, loading node locations, DWF and runoff parameters will be developed in conjunction with discussions with WWL staff.
 * For each sub catchment a loading node within the model extents should be defined, this node should generally be located within the lower third of the catchment. Simulated dry and wet weather flows will be loaded to this node.
 
-### Land Use data
+### 4.5.2 Land Use data
 
 The consultant must define contributing areas and set appropriate land uses within the model. For the purposes of development DWF inflows, each sub-catchment should be classified into development units which represent differing district plan land use.
 
-### Initial Catchment Hydrological Parameters
+### 4.5.3 Initial Catchment Hydrological Parameters
 
 Sub catchment runoff parameters:
 
@@ -450,7 +450,7 @@ Sub catchment runoff parameters:
 * Dimension: Square root of the area
 * Rainfall profiles: Based on closest rain gauge
 
-## DWF Model Build
+## 4.6 DWF Model Build
 
 There are four main sources of inflow to a wastewater network during dry weather flow periods:
 
@@ -472,7 +472,7 @@ E = industrial effluent (L/day)
 
 See Appendix E for typical DWF contributions, application of DWF contribution rates should be agreed with WWL.
 
-### Residential Loads
+### 4.6.1 Residential Loads
 
 #### Population
 
@@ -503,7 +503,7 @@ A trade waste group is to be set-up and a profile entered for each trade flow. A
 
 The initial generic diurnal commercial profile(s) to be used are provided in Appendix E and can be refined during model calibration against observed data where available.
 
-## Base Flow Setup
+## 4.7 Base Flow Setup
 
 For design horizon models four separate baseflow values will need to be considered:
 
@@ -695,6 +695,7 @@ Whilst tables above and below summarise the details on runoff surfaces and groun
 
 | Field | Value | Calibration Parameter |
 | --- | --- | --- |
+| Soil Depth (m) | 1 | No |
 | Percolation Coefficient |  | Yes |
 | Baseflow Coefficient | 0.01 | No |
 | Infiltration Coefficient | 0.2 | No |
@@ -756,4 +757,21 @@ If required and available, the model performance will be compared against the pr
 | Network | Wastewater Loads | Rainfall |
 | --- | --- | --- |
 | Existing Network | Existing | 5 years of rainfall data recorded at the nearest permanent rain gauge (s) |
+
+## 5.8 Review
+
+The calibration review is to be held at the completion of the WWF and hydraulic calibration phase. It is anticipated that this will involve the review for each gauge’s WWF and hydraulic calibration, verification and validation plots. A brief memo (note this memo is expected to be a draft form of the model build and calibration report) is to be submitted to WWL and should include details as described below. Note: It is important that issues arising for calibrations of any gauge should be raised and discussed at this review. Steps to mitigate or correct any discrepancies that may arise should be agreed during this review and documented in the finalised model build and calibration report.
+
+> [!NOTE]
+> Wet Weather Calibration: The WWF plots and a draft version of the WWF section of the calibration report will be submitted to WWL for review. The report will identify any monitors that could not be matched to the stated criteria, discuss why and identify any likely implications to the future use of the model.
+> 
+> Hydraulic Calibration: The calibration event level plots and a draft version of the hydraulic calibration section of the calibration report will be submitted to WWL for review. The report will identify any monitors that could not be matched to the stated criteria, discuss why and identify any likely implications to the future use of the model.
+> 
+> Model Verification: Verification plots demonstrating the model’s ability to predict dry and wet weather flows will be submitted and discussed for each flow gauging site.  Any Issues and comments arising from this review should be included in the finalised Model Build and Calibration report. The report should also comment on gauges where correlation is poor and provide reasons where possible.
+> 
+> Model Validation: > Results of Validation should be provided at review and should highlight any mismatches between model performance and network performance. The consultant will also comment on any issues on the model’s ability to predict historic network performance and the potential impact on the model’s capability to assess existing and future system performance.
+
+## 5.9 Reporting
+
+Following completion of any actions identified during the WWF calibration review (A.5), a draft model build and calibration report is to be produced which incorporate review memos A.1 to A.5. Following review and receipt of comments from WWL, a final report shall be produced. In addition, the consultant will supply calibrated model database and supporting workings and data.
 
