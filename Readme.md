@@ -916,9 +916,9 @@ For the purposes of the study, sewers which have Peak Dry Weather Flow (PDWF) ve
 The following performance assessment criteria are adopted:
 
 * PDWF Velocity
-  * <0.5 m/s – Particularly low velocities and high risk of siltation issues;
-  * >= 0.5 and <0.75 m/s – Low velocity and potential siltation issues;
-  * >0.75m/s – Acceptable velocity.
+  * less than 0.5 m/s – Particularly low velocities and high risk of siltation issues;
+  * greater than or equal to 0.5 and <0.75 m/s – Low velocity and potential siltation issues;
+  * greater than 0.75m/s – Acceptable velocity.
 
 See Appendix H - Example System Performance Figures  for example figure output.
 
@@ -938,7 +938,7 @@ To assess the performance of the WWL sewer under DWF loads the following results
 The following performance assessment criteria are adopted:
 
 * DWF Overflows
-  * > 0 – Fail;
+  * greater than 0 – Fail;
   * Nil – Acceptable.
 * Pipe Performance:
   * If Qmax / Qcap > 1 then pipe surcharged due to pipe capacity exceeded;
@@ -965,11 +965,11 @@ The pump storage available is to be limited to the static volume in the wetwell 
 The following performance assessment criteria are adopted:
 
 * Hours of Storage;
-  * <4hrs of ADWF Storage – Minimal Storage Available;
-  * >4hrs of ADWF Storage – Acceptable.
+  * less than 4hrs of ADWF Storage – Minimal Storage Available;
+  * greater than 4hrs of ADWF Storage – Acceptable.
 * Pump Rate / ADWF;
-  * <4 – Potential Capacity Issue;
-  * > 4 – Acceptable.
+  * less than 4 – Potential Capacity Issue;
+  * greater than 4 – Acceptable.
 * Pump Station Starts.
 
 See Appendix H - Example System Performance Figures  for example figure output.
@@ -994,5 +994,40 @@ With the event start stop dates identified previously, calculate the RDII volume
 Discard the events that exceed a 2 Yr ARI and are less than a 2mth ARI, with the remaining events calculate the following wet weather system performance indicators:
 
 <p align="left">
+  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/dc804abf12908327a8e738a898e8ce8f59270b88/images/RDI_IPI_1.png" width=300 />
+</p>
+(Indicates ratio of rainfall infiltration to the pipe network based on catchment area, units are m³/m²/mm)
+
+Where:
+* RDII volume (m³) = total simulated RDII volume calculated from all events in the long-term time series analysis.
+* Catchment area (m²) is the measured area in the catchment.
+* Rainfall Depth (mm) is a measured accumulated rainfall depth from the rain gauge data
+* lease be aware that the total simulated RDII volume depends on event characteristics from the rainfall event analysis. This implies that some of RDII remains unaccounted for in the periods not simulated. Therefore this parameter is used only for comparison of sub catchment leakiness.
+
+#### WWF Contribution: Performance Criteria
+
+The following performance assessment criteria are adopted.
+
+* RDI / IPI 1
+  * less than 5% - Low
+  * 5 – 10 % - Moderate
+  * 10 – 15% - High (Considerable)
+  * greater than 15% - Significantly High
+  
+6.6.3 Overflow Performance Assessment
+
+The performance of the network is to be assessed for existing, medium term and long term development scenarios with the 10 year historical rainfall time series to estimate frequency of overflow from controlled structures, uncontrolled locations (through manhole lids) and catchment lumped overflows.
+
+#### Overflow Event Identification
+
+Overflow events are to be identified as events where the spill discharge exceeded 0l/s and separated by a 24-hour period of no spill. If a spill exceeds 5 days in duration, it is to be split into a new event.
+
+#### Overflow ARI
+
+The average recurrence interval (ARI) calculated in this section is defined only for overflow incidents for the period of long term simulation. This is independent of rainfall event ARI values.
+
+Average recurrence intervals (ARIs) for overflow events were estimated using a frequency distribution formula for a partial series, as recommended by Australian Rainfall and Runoff (1987) see below equation:
+
+<p align="mid">
   <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/dc804abf12908327a8e738a898e8ce8f59270b88/images/RDI_IPI_1.png" width=300 />
 </p>
