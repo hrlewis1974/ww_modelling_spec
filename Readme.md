@@ -874,6 +874,9 @@ To assess DWF contribution and the potential for infiltration / exfiltration, fo
 
 From the above calculated data the following ratios are to be developed.
 
-https://github.com/hrlewis1974/ww_modelling_spec/blob/83207fc6dfabc3c0bf3d88a2cca8288d18e9c15d/images/DWLR_1.png
-https://github.com/hrlewis1974/ww_modelling_spec/blob/83207fc6dfabc3c0bf3d88a2cca8288d18e9c15d/images/DWLR_2.png
-
+<p align="left">
+  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/83207fc6dfabc3c0bf3d88a2cca8288d18e9c15d/images/DWLR_1.png" width=900 />
+</p>
+<p align="left">
+  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/83207fc6dfabc3c0bf3d88a2cca8288d18e9c15d/images/DWLR_2.png" width=900 />
+</p>
