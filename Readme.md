@@ -873,3 +873,7 @@ DWF results form a combination of foul flow and, in many cases, groundwater infi
 To assess DWF contribution and the potential for infiltration / exfiltration, for each gauge catchment the following indicators are calculated, from WWL Water Consumption records (ADWF(wc)), where available,  and a design ADWF per population equivalent per day (ADWF(design))
 
 From the above calculated data the following ratios are to be developed.
+
+https://github.com/hrlewis1974/ww_modelling_spec/blob/83207fc6dfabc3c0bf3d88a2cca8288d18e9c15d/images/DWLR_1.png
+https://github.com/hrlewis1974/ww_modelling_spec/blob/83207fc6dfabc3c0bf3d88a2cca8288d18e9c15d/images/DWLR_2.png
+
