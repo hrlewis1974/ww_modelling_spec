@@ -1,7 +1,6 @@
 # ignore folders
 notes/
 markdown/
-tsql/
 
 # ignore log files
 **/*.log
