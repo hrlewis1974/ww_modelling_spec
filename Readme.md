@@ -994,7 +994,7 @@ With the event start stop dates identified previously, calculate the RDII volume
 Discard the events that exceed a 2 Yr ARI and are less than a 2mth ARI, with the remaining events calculate the following wet weather system performance indicators:
 
 <p align="left">
-  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/dc804abf12908327a8e738a898e8ce8f59270b88/images/RDI_IPI_1.png" width=300 />
+  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/dc804abf12908327a8e738a898e8ce8f59270b88/images/RDI_IPI_1.png" width=400 />
 </p>
 (Indicates ratio of rainfall infiltration to the pipe network based on catchment area, units are m³/m²/mm)
 
@@ -1029,5 +1029,104 @@ The average recurrence interval (ARI) calculated in this section is defined only
 Average recurrence intervals (ARIs) for overflow events were estimated using a frequency distribution formula for a partial series, as recommended by Australian Rainfall and Runoff (1987) see below equation:
 
 <p align="middle">
-  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/477ff2f544d4269740256ac6971603aed2b8db3a/images/ARI.png" width=300 />
+  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/477ff2f544d4269740256ac6971603aed2b8db3a/images/ARI.png" width=150 />
 </p>
+Where:
+* n = Number of years in simulation
+* m = Rank of particular event
+
+#### Overflow Classification
+
+Overflows are characterised into three types as below:
+
+* Type 1&2 (Engineered Overflow Point (EOP)) - Overflows from formal structures designed to spill, preventing uncontrolled spills upstream. Type 1 refers to a pump station or storage facility EOP, Type 2 refers to a network EOP. Generally these structures spill to watercourses, stormwater systems or directly to the harbour;
+* Type 3 (Uncontrolled) - Overflows from informal structures, normally through manhole lids. In many cases these overflows will occur onto road / driveway surfaces from where the spill is collected by the stormwater system and conveyed to a nearby watercourse or harbour;
+* Type 4 (Catchment Overflows) – Overflows which occur upstream of the modelled network extents. These un-modelled overflows are expected to include both actual overflows (generally uncontrolled), and artificial overflows which in reality will, due the capacity of the sewer being exceeded, not enter the network as I/I and will leave the catchment as stormwater runoff.
+
+Overflows from the above types are also to be classified based upon annual spill volumes into the following classes:
+
+* Low Volume: Spill volume < 1,000m³/yr
+* Medium Volume: 1,000 < Spill volume < 10,000m³/yr
+* Large Volume: Spill volume > 10,000m³/yr
+
+#### Statistical Analysis of Overflows
+
+Use the results of the 10-year historical time series analysis to determine the following:
+
+* The overflow volume and overflow peak flow rates for the various Overflow ARI containment standards as nominated by WWL.
+* an Overflow ARI to volume relationship for each modelled overflow
+* an Overflow ARI to peak flow rate relationship for each modelled overflow
+* an annual overflow volume total for each modelled overflow for each of the 10 years in the time series
+
+See Appendix H - Example System Performance Figures for example figure output.
+
+## 6.7 Wet Weather System Performance Assessment – Design Storm Simulation
+
+### 6.7.1 Overview
+
+The purpose of this design storm analysis is to utilise a selected rain event to review network performance in order to identify potential constraints within the network, which may exceed 2 spills of untreated wastewater per year on average.
+
+### 6.7.2 Design Storm Identification
+
+To enable a rapid assessment of proposed network upgrades a design storm is to be identified from the 10yr historical rainfall time series. A moderate storm which is approximately equivalent to 2 spills per annum should be selected. LOS requirements may not be the 2 spills per annum, in such circumstances specific instruction will be provided in the project brief.
+
+To identify this design storm, Type 1, 2 and 3 overflow performance from the existing network run with long term rainfall time series should be reviewed. With the event considered to have the strongest correlation with the simulated 6mth ARI overflow (considering both peak flow and volume) for a number of release points selected. It should be noted that this design storm identified as the baseline requirement, and it will not be representative for every location within the system.  However, this design rainfall event should be considered an appropriate initial event to use for system performance and option assessment. Appendix J contains an example of design storm selection from the results of the LTS run.
+
+### 6.7.3 Model Simulations
+
+The table below, details the design storm system performance items to be assessed for each model network and development scenario.
+
+| Scenario ID | Scenario Description | Design Storm |
+| --- | --- | --- |
+| Base | Existing | LTS |
+| M2L | Medium to Long (+20 years) | LTS |
+| MPD | Maximum Possible Development (+50 years) | LTS |
+| SEN | Year + 50 + Sensitivity | LTS |
+
+### 6.7.4 Sewer Network Design Storm Performance
+
+#### Sewer Design Storm Capacity – Background
+
+To assess the performance of the catchment under the Design Storm, the following results are to be assessed:
+
+* Overflow Volume;
+* Pipe Filling (based on the ratio of peak flow depth to conduit diameter (Hmax / Dmax), where >1 indicates that the sewer is surcharged;
+* Pipe Capacity (based on the ratio of peak conduit flow to conduit manning capacity (Qmax / Qcap), where >1 indicates that the sewers capacity is exceeded. In some cases it is possible for the sewers simulated flow to exceed the sewer mannings capacity but not be surcharged in these instances the pipe filling ratio is to be reported as the performance of the sewer.
+
+#### Sewer Design Storm Capacity – Performance Criteria
+
+The following performance assessment criteria are adopted for simulation results:
+
+* Design Storm Overflow (Type 1, 2 and 3 Overflow Locations):
+  * less than 10m3 - Minor;
+  * 10 – 100m3 - Moderate;
+  * greater than 100m3 – Significant.
+* Pipe Performance;
+  * If Qmax / Qcap > 1 then the pipe is surcharged due to the pipe capacity being exceeded;
+  * Else if Hmax / Dmax > 1 then pipe is surcharged due to downstream constraints.
+
+See Appendix H - Example System Performance Figures  for example figure output.
+
+### 6.7.5 Pump Station Design Storm Capacity
+
+#### Pump Station Design Storm Capacity – Background
+
+To assess the performance of the WWL pump stations under DWF loads the following model results are to be assessed:
+
+Pump capacity / PWWF (For simplification, peak flows of incoming wet well flows and overflows are to be summed assuming that they occurred simultaneously, this assumption is conservative.)
+
+See Appendix H - Example System Performance Figures for example figure output.
+
+#### Pump Station Design Storm Capacity – Performance Criteria
+
+The following performance assessment criteria are to be adopted:
+
+Pump capacity / PWWF:
+
+* less than 1 – Good;
+* 1 – 2 – Poor;
+* greater than 2 – Significant.
+
+## 6.8 Output: WWL Review B.1–System Performance Assessment Report
+
+Following completion of any the system performance activities a draft system performance report is to be produced. Following review and receipt of comments from WWL a final report shall be produced. An example report template will be provided by WWL.
