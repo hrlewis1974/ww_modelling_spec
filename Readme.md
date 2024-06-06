@@ -209,3 +209,289 @@ Recommended updates to GIS or other data management software (eg: InfoNet)
 >   * Indicate whether PWWF/PDWF criterion is met for selected event
 >   * Gauged spills statistics – frequency, duration.
 >   * Provide a summary tables of daily average observed wastewater flow volumes and average volume of water usage meter records for each gauge catchment for dry weather period
+
+# Hydraulic Model Build
+
+## General
+
+This specification is developed to provide minimum requirements to follow during model build process, system assessment stages, option developments and improvement works plans preparation. 
+
+A good understanding of the following aspects is expected from the modeller during the model building work:
+
+* hydraulics of flow in sewers and sewer ancillary structures
+* urban hydrology
+* the assumptions implicit in the way the software carries out the calculations
+* methods of measurement of flow in sewers and their accuracy
+* concepts of appropriate engineering solutions to mitigate wastewater network issues
+
+Consider all requirements contained in this specification as minimum requirements. Where it is identified that further work may produce an enhanced result, in such situations written prior approval should be obtained from Wellington Water.
+
+Carry out a site visit prior to commencement of the modelling project to familiarise the modelling team with catchment topography, wastewater system features, land use etc.
+
+## Data Flags
+
+The WWL standard user flag system must be used. This will allow users to identify the data sources and changes (see Appendix C - Data Flags for a description of each of the flags and their use). Data sources and all assumptions should be clearly documented in the Model Build Report.
+
+The model build data tagging information shall become the metadata which will be prepared in a spread sheet and accompany the model upon delivery.
+
+The model build data shall include the minimum following attributes:
+
+* Nodes:  invert levels, ground levels, diameter, storage table, energy loss, cover type;
+* Links: gravity or pressure main, diameter, width/height, cross-section, roughness material, upstream and downstream invert levels;
+* Sub-catchments: pervious/impervious area, parameter values
+* Ancillary Structures: invert levels, width, cross-section, passive flow regulations;
+
+Possible sources could include council GIS, survey, derived from other data, e.g.
+
+LiDAR contours or raster grid, derived from interpolation, extrapolation, assumption, parameter values assigned from literature, modelling specifications etc.
+
+## WWL Modelling Data Standards
+
+Final model asset data following completion of the model build is to be provided to WWL in accordance with WWL Modelling Data Standards format (refer Modelling Data Standards Report, WWL, June 2019).
+
+##	Hydraulic Model Build
+
+###	Nodes
+
+Model nodes can be classed into two categories: - standard manholes/chambers and dummy nodes. Dummy nodes are utilized to maintain consistency with the GIS e.g. representation of the GIS ‘Nodal Changes’ features.
+
+Manholes should as default be represented with flood type of lost, however care should be taken to identify manhole lids that have been strapped / sealed in which case the flood type should be set as sealed. This manhole locations should be clearly documented to WWL.
+
+Dummy nodes should as default be represented with flood type of sealed, with the manhole ground level set to match the highest connecting pipe soffit. Manhole chamber dimensions should match the largest contributing pipe diameter.
+
+### Un-modelled Storage
+
+Wastewater reticulation upstream of the model extents may be represented within the model at loading nodes. This un-modelled storage should include network with invert levels lower than the lid level of the loading node.
+
+The use of un-modelled storage may not be necessary in detailed or catchment models where the practice generally is to have most of the wastewater pipe network and manholes included in the model.
+
+If any model simplification has been undertaken, manholes are removed from the modelled network. The missing pipes, manholes and connection pipes, provide a storage volume (when the network is surcharged) and can be represented using an inference tool within ICM. Background guidance can be found on this in the WaPUG User Note 15 “Storage Compensation”.
+
+### Conduits
+
+Model conduits can be classed into three categories:
+
+* gravity mains,
+* siphons and
+* rising mains
+
+Rising mains in general are not required to be explicitly modelled, an exception to this are shared rising mains which should in general be explicitly modelled. However, the adopted approach for representing rising mains is to be agreed with WWL.
+
+The section (below) summarizes the specified conduit default hydraulic model parameters. It is expected that these default values will not apply to all locations and engineering judgment will be required to develop representative hydraulic parameters.
+
+In addition, during hydraulic calibration, these parameters may require alteration to represent gauged hydraulic performance. Deviation from the agreed default values will need to be supported by documentation and a justification for the change.
+
+#### Conduit – Asset Data
+
+The long section pipe data will be extracted from the InfoNet asset database.
+
+* A review of all long sections will be undertaken to ensure that all missing data was populated by either interpolation or engineering assumptions where interpolation was not possible.
+* Pipe dimensions such as shape, width and height must be checked against available information such as as-built drawings, models and other GIS datasets.
+* Match US soffit to DS soffit unless confirmed otherwise by Asset Data. In the case of steep gradients with suspected drop structures, adopt upstream pipe gradient to estimate downstream invert.
+* Conduit alignments may need to be corrected (from GIS) to follow their true course to represent pipe lengths reliably and improve visual representation.
+* Pipe Length: The minimum conduit length shall be set to 5m.
+
+#### Conduit – Sediments and Obstructions
+
+Sediments usually collect in slow flowing parts of the network, typically inverted siphons and large flat pipes where there is direct inflow upstream.  Sewer sections most prone to sediment build up and the model approach followed to represent these local issues will need to be documented. Silt depths present in the model will need to supported by documentation such as a CCTV or manhole survey. It is recommended that localized blockages and obstructions are represented using an appropriately size orifice rather than applying silt along the whole length of pipe.
+
+Root intrusion may be represented with an orifice and a silt depth.
+
+#### Conduit – Roughness
+
+Pipe roughness is linked to pipe material, its current condition (e.g. age, wear, slime) and the presence of obstructions such as sediment, roots or grease.  Pipe roughness values may be derived from analysis of the data provided by flow survey, CCTV surveys and locations where silt collects.
+
+Pipe roughness should be initially set to Colebrook-White and initially set as 1.5mm  . This value is typical of older sewers. This can then be updated according to “page 40 Tables for Hydraulic Design of Pipes, Sewers and Channels” (HR Wallingford, 1994), extract saved Appendix D - Conduit Roughness.
+
+#### Conduit - Head Loss Coefficients
+
+Headloss coefficients are calculated on the angle of approach of the incoming and outgoing pipes to each node in the model and should initially be calculated using the Infoworks Inference tool. These initial coefficients should be checked:
+
+* To ensure that the headloss coefficients have been applied correctly. High values should be checked first and some manual adjustment may be required, particularly at side branches that join a main branch at an acute angle.
+* To identify steep pipes within the model where headloss will have a major impact on upstream water levels. If these areas are near overflows or flooding problem areas then it may be necessary to undertake further investigations into the hydraulic performance of these structures.
+
+#### Conduit - Preissmann Slot
+
+The ICM hydraulic engine applies a Preissmann Slot is a conceptual vertical and narrow slot providing a conceptual free surface condition for the flow when the water level is above the top of a closed conduit. Care with the default application of the Preissman Slot should be taken for large diameter sewers which are highly surcharged, in these instances the Preissman Slot width may require adjustment to mitigate against excess artificial storage volume being introduced in the model.
+
+### Engineered Overflow Points (EOP) and Bifurcations
+
+An Engineered Overflow Point (EOP) is defined as a chamber which has more than one outgoing pipe removing flow from the network and discharging to the environment. A bifurcation on the other hand is defined as a chamber with more than one outgoing pipe where flow is diverted to another part of the wastewater network.
+
+The following asset information is required for the modelling of overflows and bifurcations:
+
+* Invert level of high-level pipe (or weir)
+* Size of high-level pipe (or length of weir)
+* Size and invert levels of the overflow pipe to its discharge location
+* Type of overflow
+* Chamber size and layout
+
+If the overflow discharges to the sea or a river, any potential influence on the network must be examined and the performance of the overflow considered.
+
+The modeler will assume that the flow in the overflow chamber is subcritical and that the depth is therefore controlled by the continuation pipe. When modelling an overflow in ICM the following changes should be undertaken:
+
+* If a weir is fitted before the overflow pipe an additional weir link must be created.
+* The weir link will be connected to the outfall pipe by a dummy node. Flood type for this dummy node should be sealed and chamber / shaft areas set to the minimum.
+* The continuation pipe following the weir should be modelled as an orifice and connected to a dummy node.
+* The pipe immediately downstream of the overflow will also be modelled as an orifice so that headlosses can be adequately modelled.
+
+For a high-level pipe overflow, the spill pipe will be modelled as an orifice.
+
+### Orifices (Throttle pipe)
+
+Flow rates through an orifice will depend on the following:
+
+* Inlet design: cross sectional area of flow in the chamber
+* Length
+* Diameter: cross sectional area of flow in the downstream pipe
+* Hydraulic gradient
+
+The modeller must specify the following parameters:
+
+* Invert level of the orifice.
+* Orifice diameter. For non-circular pipes the opening diameter should be based on a circle of equivalent area.
+* Discharge coefficient:
+  * For a free discharging orifice, the discharge coefficient should be set to the default value of 0.85.
+  * For a drowned orifice, the discharge coefficient will range from 0.85 to 2.0.
+  * Discharge coefficients can be increased for small chambers (+30%), benching (+15%)
+* The secondary discharge coefficient should be set to 0.55 (for inline) and 0.5 for (non-inline).
+* The limiting discharge field should be set to 0.
+* Further guidance regarding the Orifice Equation can be found in the WaPUG User Note 2 ‘Modelling Ancillaries: Orifice Equations’.
+
+### Weirs
+
+Asset data such as invert level, weir length and a coefficient of discharge must be set by the modeler. Weir coefficients are influenced by a number of factors:
+
+* Weir: crest configuration; orientation (transverse of side weir); height above chamber invert.
+* Size of chamber (this will affect approach velocity).
+* Presence of screens and or ragging.
+
+Guidance for the input of weir coefficient data is suggested:
+
+* Coefficients:
+  * For transverse weirs with no screens will range between 0.6 and 0.85 (assume the higher end as a default value);
+  * For high side weirs with no screens will typically range between 0.5 and 0.75 (assume a default value of 0.55);
+  * Scumboards normally reduce the coefficient by about 10%.
+* Weir levels: Will be modelled at their correct level.
+* Checks to be made include: Outlet pipe for high heads due to steep pipes conditions; Restrictions on outlet pipe such as silt / debris.
+* Calibration of the weir coefficient may be necessary during calibration if sufficient data on operational performance allows.
+* Low Side Weirs:
+  * Supercritical flows often occur in low side weir chambers.
+  * The flow patterns are complicated and usually required the geometry of the chamber to be modelled.
+  * Guidance on how best to model low side weirs can be found in WaPUG User Note 14 ‘Modelling Low Side Weirs’.
+* Leaping Weirs: When the discharge is small, the combined flow directly falls in the the intercepting sewer but in cases of excess flow, all / part of the storm flow leaps across the opening and is thuse, diverted from the intercepting sewer. The excess storm water is usually carried to a nearby watercourse.
+  * The vertical pipe will need to be modelled as an orifice
+  * The invert of the orifice will need to be set so that the midpoint opening is at the invert of the spill pipe.
+  * The default value of 0.85 should be used for the orifices discharge coefficient.
+
+### Pump Stations
+
+Generally, there are four types of pump stations that can be modeled: trunk, local, return pump (from offline storage) and private. Asset data to be collected when modelling a pump station will include the following:
+
+* Pump characteristics:
+  * pump type
+  * number of pumps
+  * start / stop levels
+  * nominal capacity
+  * pump curve / head-discharge relationship
+  * arrangement (duty-standby or duty-assist)
+* Wet well dimensions
+* Rising main details
+* Emergency overflow details
+
+A drop test survey should be undertaken to confirm the above parameters and update any missing asset data.
+
+Guidance for the input of pump station data is as follows:
+
+* Duty-standby pump arrangements can be modelled as a single pump.
+* If the model is large and complex, some of the pumps can be changed to ‘screw pumps’, however this will need to be agreed with WWL. These changes should not be necessary during model calibration or system performance assessments.
+* Real time control may initially be collected from previous modeling / pump station reports. However, the operation will need to be confirmed with the operations staff.
+
+### Storage Tanks
+Storage tanks can be modelled as large chambers (or storage node), in-line or off-line pipes. The modeler should be aware:
+
+* Of the tank operational routines in particular how the tank is filled and drained.
+* That during initialisation, the tank will fill up to the level of the lowest outgoing link. The modeller may be required to drain the tank by adding a dummy closed gate to a dummy node at tank floor invert level.
+
+### Siphons
+
+An inverted siphon is a depressed sewer that drops below the hydraulic gradient. The pipe is usually surcharged and includes an inlet chamber, a collection of depressed pipes and an outlet chamber. It is desirable for the velocity in the depressed pipes to be above 1.5 m/s to avoid sedimentation (ideally about 3 m/s).
+
+Guidance on modelling siphons can be found in WaPUG User Note 19 ‘Modelling of Inverted Siphons in Taunton’.
+
+### Operational Rules
+
+If the network is actively operated under different operational rules and strategies those will be specified in the project scope, those should be modelled using RTC (Real time Control) functions in the software.
+
+## Hydrological Model Build
+
+### Catchment Demarcation
+
+For the purposes of calibration of the hydrologic model, sub catchments should generally be demarcated with the following criteria:
+
+* Be in the size range of 2-5Ha (note this catchment size is subject to the purpose of the model and the adopted resolution should be confirmed with WWL). Further refinement maybe required for areas with high density development.
+* Follow property boundaries and road centrelines, and exclude large reserves and other undeveloped land such as school grounds where wastewater pipes are not present or minimal.
+* Subcatchments should initially be based on district plan land uses, such as: residential, commercial, industrial, specific developments etc.
+* During model build, land-uses may be further refined according to other land uses such as: housing density / affluence, warehouses, offices, factories, etc.
+* Private drainage records should be obtained where the land use is special, such as: hospitals, airports, retail parks, industrial sites. Drainage records will help to identify where the flows enter the sewer system.
+* Where applicable new catchment extents shall be developed to cover the future service area outside the existing area of service, loading node locations, DWF and runoff parameters will be developed in conjunction with discussions with WWL staff.
+* For each sub catchment a loading node within the model extents should be defined, this node should generally be located within the lower third of the catchment. Simulated dry and wet weather flows will be loaded to this node.
+
+### Land Use data
+
+The consultant must define contributing areas and set appropriate land uses within the model. For the purposes of development DWF inflows, each sub-catchment should be classified into development units which represent differing district plan land use.
+
+### Initial Catchment Hydrological Parameters
+
+Sub catchment runoff parameters:
+
+* Catchment slope: average slope calculated from DEM analysis
+* Soil class: Based on LENZ 4
+* Dimension: Square root of the area
+* Rainfall profiles: Based on closest rain gauge
+
+## DWF Model Build
+
+There are four main sources of inflow to a wastewater network during dry weather flow periods:
+
+* Population derived flows
+* Commercial flows
+* Trade flows and
+* Baseflow
+
+When developing the dry weather flow inputs to the model, they will need to be created in the same order as above.
+
+The theoretical DWF is given by the formula below: DWF=PG+C+BF+E
+
+Where: P = Population; G = average wastewater contributing (L/hd/day); C = Commercial wastewater (L/floor area/day); BF = Baseflow (L/day), E = industrial effluent (L/day). See Appendix E for typical DWF contributions, application of DWF contribution rates should be agreed with WWL.
+
+### Residential Loads
+
+#### Population
+
+Population (P) should be applied to the model by applying a headship rate to residential property parcel. This headship rate will be based on the latest Census meshblock usually resident populations.
+
+Where seasonal population changes exists, these should be included in the model using the monthly multiplier.
+
+#### Water Consumption
+
+Water consumption (G) for calibration of models has been taken from the “Wellington City Hydraulic Model Demand (March 2010) v1” report. A consistent figure of 250 L/head/day will be applied across the catchment being modelled unless there is clear evidence of variability, from reliable flow survey data.
+
+#### Applying Residential DWF Loads
+
+Once the subcatchments have been updated with residential population figures, the water consumption (G) and diurnal variation of the flow will need to be set up in the ‘wastewater generator’ feature. The model will then generate the flow on an hourly basis by multiplying the population by the consumption rate. The initial generic diurnal profile(s) to be used are provided in Appendix E and can be refined during model calibration against observed data where available.
+
+#### Applying Commercial DWF Loads
+
+If a commercial flow is less than 1 L/s (average flow), then the total can be combined for each subcatchment. The initial generic diurnal commercial profile(s) to be used are provided in Appendix F and can be refined during model calibration against observed data where available.
+
+#### Applying Trade Waste DWF Flows
+
+Trade Flows are to be treated as individual inputs to the model and developed from WWL Trade Waste database. They are to be allocated as individual catchments (with no area).  If the allocation node does not exist, then the modeller can create a dummy node (otherwise the next downstream node may be used).
+
+A trade waste group is to be set-up and a profile entered for each trade flow. As in the previous section, the various trade waste inflows will need to show a diurnal variation. Variability in trade flow can be affected by:
+
+* Shift work
+* Differences in process
+
+The initial generic diurnal commercial profile(s) to be used are provided in Appendix E and can be refined during model calibration against observed data where available.
