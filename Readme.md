@@ -1028,6 +1028,6 @@ The average recurrence interval (ARI) calculated in this section is defined only
 
 Average recurrence intervals (ARIs) for overflow events were estimated using a frequency distribution formula for a partial series, as recommended by Australian Rainfall and Runoff (1987) see below equation:
 
-<p align="mid">
-  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/dc804abf12908327a8e738a898e8ce8f59270b88/images/RDI_IPI_1.png" width=300 />
+<p align="middle">
+  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/477ff2f544d4269740256ac6971603aed2b8db3a/images/ARI.png" width=300 />
 </p>
