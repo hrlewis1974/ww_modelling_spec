@@ -777,3 +777,99 @@ The calibration review is to be held at the completion of the WWF and hydraulic 
 
 Following completion of any actions identified during the WWF calibration review (A.5), a draft model build and calibration report is to be produced which incorporate review memos A.1 to A.5. Following review and receipt of comments from WWL, a final report shall be produced. In addition, the consultant will supply calibrated model database and supporting workings and data.
 
+# 6 System Performance Assessment
+
+## 6.1 Overview
+
+This section details the system performance model scenarios to be developed and assessed to identify network capacity limitations.
+
+The below Table 7 outlines the core model setups required for this analysis, each of these setups are to be assessed for a number of different loading scenarios including:
+
+* Dry Weather Flow (DWF);
+* 10yrs Historical Rainfall Time Series;
+* 1 Representative Design Storm (DS).
+
+| Scenario ID | Scenario Name | Network | Wastewater Loads | Operational | Climate Change and Sea Level |
+| --- | --- | --- | --- | --- | --- |
+| Calib | Calibration Model | Existing | Current | Inclusion of RTC and silt to be agreed with WWL. | to be agreed with WWL. |
+| Base | Existing | Committed | Current | Inclusion of RTC and silt to be agreed with WWL. | to be agreed with WWL. |
+| CUR (usn1) | Current | Committed | + 3 years | Inclusion of RTC and silt to be agreed with WWL. | to be agreed with WWL. |
+| MED (usn2) | Medium | Committed | + 10 years | Inclusion of RTC and silt to be agreed with WWL. | to be agreed with WWL. |
+| M2L (usn3) | Medium to Long | Committed | + 20 years | Inclusion of RTC and silt to be agreed with WWL. | to be agreed with WWL. |
+| LNG (usn4) | Long term | Committed | +30 years | Inclusion of RTC and silt to be agreed with WWL. | to be agreed with WWL. |
+| MPD (usn5) | Maximum Possible Development | Committed | +50 years | Inclusion of RTC and silt to be agreed with WWL. | to be agreed with WWL. |
+| SEN | Year + 50 + Sensitivity | Committed | +50 + sensitivity | Inclusion of RTC and silt to be agreed with WWL. | to be agreed with WWL. |
+
+Committed means existing network with committed trunk network upgrade works which are under design or construction.
+
+All scenarios are required to be developed, reviewed, and delivered to WWL. However, unless otherwise specified in the Project Brief, for the System Performance Assessment (SPA) only a limited number of scenarios are required to be assessed and reported upon, as follows:
+
+* Base (Existing)
+* M2L (+20 years)
+* MPD (+50 years)
+* SEN (+50 years and 25% additional) – tables only, no figures required
+
+It is expected, unless other agreed with WWL, that system performance figure will produce following the template examples provided in Appendix H - Example System Performance Figures.
+
+## 6.2 Items Supplied by WWL
+
+WWL will supply the following in order to complete this analysis:
+
+* Calibrated catchment model, including all associated files and Model Build and Calibration Report
+* Historical rainfall and potential evaporation time series for the 10-year continuous time series period,
+* Boundary time series where necessary, this will include river/stormwater systems/tide levels where appropriate.
+* Specified catchment-wide assumptions and SQL queries to update and develop scenarios. See Appendix I for queries.
+
+## 6.3 Scenario Development
+
+### 6.3.1 Network Update with Committed Projects
+
+The future development model scenarios shall be updated to include all schemes and rehabilitation works committed for construction. All changes made to the hydraulic model under committed schemes should be fully documented.
+
+### 6.3.2 Wastewater Loads
+
+WWL have developed a set of SQL queries to enable the system performance scenarios to be rapidly created, and to ensure consistency in approach. The purpose and key assumptions for each step are summarised in Appendix E, along with details on the SQL process, required information and formats, and purposes of each step. Running these queries will create the system performance scenarios and the resultant residential and non-residential population forecasts and hydrological parameters associated with the catchment assumptions for future scenarios.
+
+Note that the provision of these SQL processes does not absolve the modeler of responsibility for checking that the inputs and outputs to this process are sensible.
+
+### 6.3.3 Population Growth
+
+Population forecasts for each scenario are automatically generated through the application of the SQL queries. Calibrated DWF loading rates (L/PE/Day) are to be multiplied by the population estimates to develop the assumed DWF loads. These will be adjusted by assumptions for water consumption reduction over time, as provided in the catchment-wide assumptions.
+
+Non-Resident Population – Specific Developments and Seasonal/Event Variations
+Increases in non-residential flows are generated through the application of the SQL (Appendix I - Scenario Development Set up for SQL), as are new commercial developments.
+
+Seasonal/Event Variations will be developed on a case by case basis in discussions with WWL staff. It is anticipated that this is more likely to be specific to isolated projects and not to be considered from an overall catchment planning perspective.
+
+## 6.4 Rainfall and Evaporation Data
+
+### 6.4.1 10 years Historical rainfall
+
+To assess catchment and network system performance a 10-year rainfall historical record will be simulated through the model. This rainfall record is to be sourced from the appropriate permanent/long term rain gauge located within the catchment and agreed with WWL. The determination of the 10yr continuous rainfall need to be developed using the Cardno methodology that is contained in the document “Analysis of Rainfall Trends” that was produced for WWL for input into the wastewater modelling catchments.  The analysis of the rainfall to be agreed with WWL.
+
+### 6.4.2 Potential Evapo-transpiration
+
+An evapotranspiration time series for the system performance is to be sourced from available daily historical records and agreed with WWL.
+
+## 6.5 Dry Weather System Performance
+
+### 6.5.1 Model Simulations
+
+Table below outlines the DWF system performance assessment activity to be completed for each development scenario. To develop DWF results each scenario shall be simulated for 7 days covering weekday and weekend diurnal profiles.
+
+| Scenario ID | Scenario Description | DWF Contribution (Infiltration / Exfiltration Analysis) | Pipe Siltation Potential | Sewer DWF Capacity | Pump Station Capacity |
+| --- | --- | --- | --- | --- | --- |
+| Base | Existing | Yes | Yes | Yes | Yes |
+| M2L | Medium to Long (+20 years) | No | No | Yes | Yes |
+| MPD | Maximum Possible Development (+50 years) | No | No | Yes | Yes |
+| SEN | Year + 50 + Sensitivity | No | No | Yes | Yes |
+
+### 6.5.2 DWF Contribution - Infiltration / Exfiltration Analysis
+
+#### DWF Contribution – Background
+
+DWF results form a combination of foul flow and, in many cases, groundwater infiltration. In other instances, ADWF can be a result of foul flow and exfiltration of a portion of the foul flow from the reticulation into the surrounding soil substrate. Foul flow is dependent on the equivalent population (EP) of the catchment, while the infiltration / exfiltration component is related to reticulation leakiness. Where infiltration can be due to elevated water tables leaking into the system through defects such as open pipe joints or pipe and manhole cracks in both sewers and house laterals, exfiltration of the sewage out of the reticulation system can occur in leaky systems with low groundwater tables.
+
+To assess DWF contribution and the potential for infiltration / exfiltration, for each gauge catchment the following indicators are calculated, from WWL Water Consumption records (ADWF(wc)), where available,  and a design ADWF per population equivalent per day (ADWF(design))
+
+From the above calculated data the following ratios are to be developed.
