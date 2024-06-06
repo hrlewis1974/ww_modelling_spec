@@ -992,3 +992,7 @@ During large storms it is expected that a portion of the simulated I/I will in r
 With the event start stop dates identified previously, calculate the RDII volume simulated to enter the sewer (excluding DWF sources). With these RDII event volumes (not rainfall volume) apply the frequency distribution formula (see the below section for partial series formula) to calculate RDII event volume ARI.
 
 Discard the events that exceed a 2 Yr ARI and are less than a 2mth ARI, with the remaining events calculate the following wet weather system performance indicators:
+
+<p align="left">
+  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/dc804abf12908327a8e738a898e8ce8f59270b88/images/RDI_IPI_1.png" width=300 />
+</p>
