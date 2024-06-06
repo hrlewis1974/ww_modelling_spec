@@ -1,5 +1,6 @@
 # ignore folders
 notes/
+markdown/
 
 # ignore log files
 **/*.log
