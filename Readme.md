@@ -875,8 +875,120 @@ To assess DWF contribution and the potential for infiltration / exfiltration, fo
 From the above calculated data the following ratios are to be developed.
 
 <p align="left">
-  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/83207fc6dfabc3c0bf3d88a2cca8288d18e9c15d/images/DWLR_1.png" width=900 />
+  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/83207fc6dfabc3c0bf3d88a2cca8288d18e9c15d/images/DWLR_1.png" width=300 />
 </p>
 <p align="left">
-  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/83207fc6dfabc3c0bf3d88a2cca8288d18e9c15d/images/DWLR_2.png" width=900 />
+  <img src="https://github.com/hrlewis1974/ww_modelling_spec/blob/83207fc6dfabc3c0bf3d88a2cca8288d18e9c15d/images/DWLR_2.png" width=300 />
 </p>
+
+Where:
+* ADWF(measured), with units l/s, is the numerical average of the daily average dry weather flow hydrograph (data in 5 minute format) in the catchment taken from a sample of no less than 8 weekdays in the flow monitoring period.
+* ADWF(design), with units l/s, is the design average dry weather flow derived using catchment population data for the catchment (supplied by WWL) and an average dry weather flow loading rate of 220 l/PE/day multiplied by a return to sewer ratio of 90%.
+* ADWF(wc) , with units l/s is calculated from the water consumption records for the catchment multiplied by the return ratio of 90% (water meter records, where available, will be supplied by WWL).
+
+The above ratios are utilised as an indication of infiltration / exfiltration within each gauged catchment, where the expected normal ratio is within 0.70 to 1.20.
+
+#### DWF Contribution – Performance Criteria
+
+The following performance assessment criteria are adopted:
+
+* DWLR(1)
+  * x < 0.7 – Possible Exfiltration;
+  * 0.7 < x <1.2 – Expected Normal Range;
+  * x >1.2 – Possible Infiltration.
+* DWLR(2)
+  * x < 0.7 – Possible Exfiltration;
+  * 0.7 < x <1.2 – Expected Normal Range;
+  * x >1.2 – Possible Infiltration.
+
+See Appendix H - Example System Performance Figures  for example figure output.
+
+### 6.5.3 Pipe Siltation Potential
+
+#### Pipe Siltation Potential – Background
+
+In sewers solids tend to settle under low velocity conditions. Self-cleansing velocity must be developed regularly to flush out solids. Generally accepted practice is to maintain velocity above 0.5m/s under low flow conditions and under peak dry weather condition the lines must attain velocity greater than 0.75m/s.
+
+For the purposes of the study, sewers which have Peak Dry Weather Flow (PDWF) velocities less than 0.75m/s have been identified as locations with potential to suffer from siltation issues and sewers simulated with velocities of less than 0.5m/s are identified with a high risk of siltation.
+
+#### Pipe Siltation Potential – Performance Criteria
+
+The following performance assessment criteria are adopted:
+
+* PDWF Velocity
+  * <0.5 m/s – Particularly low velocities and high risk of siltation issues;
+  * >= 0.5 and <0.75 m/s – Low velocity and potential siltation issues;
+  * >0.75m/s – Acceptable velocity.
+
+See Appendix H - Example System Performance Figures  for example figure output.
+
+### 6.5.4 Sewer Network DWF Performance
+
+#### Sewer DWF Capacity – Background
+
+To assess the performance of the WWL sewer under DWF loads the following results are to be assessed:
+
+* DWF Overflows;
+* Pipe Filling (based on the ratio of peak DWF depth to conduit diameter (Hmax / Dmax)), where >1 indicates that the sewer is surcharged;
+* Pipe Capacity (based on the ratio of peak conduit flow to conduit manning capacity (Qmax / Qcap)), where >1 indicates that the sewers capacity is exceeded.
+  * In some cases it is possible for the sewers simulated flow to exceed the sewer mannings capacity but not be surcharged in these instances the pipe filling ratio is reported as the performance of the sewer.
+
+#### Sewer DWF Capacity – Performance Criteria
+
+The following performance assessment criteria are adopted:
+
+* DWF Overflows
+  * > 0 – Fail;
+  * Nil – Acceptable.
+* Pipe Performance:
+  * If Qmax / Qcap > 1 then pipe surcharged due to pipe capacity exceeded;
+  * Else if Hmax / Dmax > 1 then pipe surcharged due to downstream constraint;
+  * Else if Hmax > 0.5D then PDWF exceeds half pipe diameter.
+
+See Appendix H - Example System Performance Figures for example figure output.
+
+### 6.5.5 Pump Station DWF Capacity
+
+#### Pump Station DWF Capacity – Background
+
+To assess the performance of the WWL pump stations under DWF loads the following model results are to be assessed:
+
+* Hours of Storage;
+* ADWF / Pump Rate;
+* Pump Station Starts.
+* Pump Station Run Time
+
+The pump storage available is to be limited to the static volume in the wetwell (above pump start level and any associated storage facilities. Note: this will underestimate the available storage as it will not allow for any storage capacity in the upstream contributing network, in case where this network storage is identified to be important, the consultant will agree with WWL as to whether to include this network within the pump storage assessment.
+
+#### Pump Station DWF Capacity – Performance Criteria
+
+The following performance assessment criteria are adopted:
+
+* Hours of Storage;
+  * <4hrs of ADWF Storage – Minimal Storage Available;
+  * >4hrs of ADWF Storage – Acceptable.
+* Pump Rate / ADWF;
+  * <4 – Potential Capacity Issue;
+  * > 4 – Acceptable.
+* Pump Station Starts.
+
+See Appendix H - Example System Performance Figures  for example figure output.
+
+| Scenario ID | Scenario Description | RTC Scenario | 10yr Historical Rainfall | Inflow / Infiltration assessment |
+| --- | --- | --- | --- | --- |
+| Base | Existing | Inclusion of RTC to be discussed | Yes | Yes |
+| M2L | Medium to Long (+20 years) |  | Yes | No |
+| MPD | Maximum Possible Development (+50 years) |  | Yes | No |
+| SEN | Year + 50 + Sensitivity |  | Yes | No |
+
+### 6.6.2 Rainfall Dependent Inflow and Infiltration Assessment
+
+The inflow and infiltration assessment is to be completed for the existing development conditions only from the simulated 10yr LTS runoff results.
+
+I/I events are identified as rain events from the long-term rainfall time series event analysis, developed for the Long-Term Simulation (LTS). Rain events are to be separated by a 24-hour dry period within the long-term rainfall time series and to have total depth of >= 5mm. The identified events should be agreed with WWL.
+
+During large storms it is expected that a portion of the simulated I/I will in reality not enter the sewer network, as the model predicts, due to the network being at ‘capacity’ and will in fact contribute to stormwater runoff. Hence for the purposes of this analysis RDII volumes with an ARI >2yrs will be excluded from I/I analysis. The lower end storms with an RDII volume <2mth ARI will also be excluded as the network is expected to have sufficient capacity to convey I/I from these smaller events. In addition, ‘runoff’ from these smaller events may be dominated by antecedent conditions, which may skew I/I assessment. Note: this standard process enables the II performance of this catchment to be compared with other catchments.
+
+With the event start stop dates identified previously, calculate the RDII volume simulated to enter the sewer (excluding DWF sources). With these RDII event volumes (not rainfall volume) apply the frequency distribution formula (see the below section for partial series formula) to calculate RDII event volume ARI.
+
+Discard the events that exceed a 2 Yr ARI and are less than a 2mth ARI, with the remaining events calculate the following wet weather system performance indicators:
