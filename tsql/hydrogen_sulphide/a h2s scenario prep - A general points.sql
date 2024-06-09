@@ -1,0 +1,1 @@
+DELETE ALL FROM [general point] IN SCENARIO 'h2s';

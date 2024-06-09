@@ -1,0 +1,1 @@
+DELETE ALL FROM [polygon] IN SCENARIO 'h2s';

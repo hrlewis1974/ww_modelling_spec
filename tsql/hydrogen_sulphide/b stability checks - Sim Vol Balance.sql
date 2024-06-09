@@ -1,0 +1,1 @@
+abs( sim.volbal ) > 0.05
